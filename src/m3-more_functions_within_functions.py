@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (6 pts)
+# DONE: 1. (6 pts)
 #
 #   In this module, we are going to start the process of making our own
 #   calculator. It is going to be a very simple calculator, because the user
@@ -28,8 +28,28 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+def add(num1, num2):
+    aresult = num1 + num2
+    return aresult
+
+def subtract(num1, num2):
+    sresult = num1 - num2
+    return sresult
+
+def multiply(num1, num2):
+    mresult = num1 * num2
+    return mresult
+
+def divide(num1, num2):
+    dresult = num1 / num2
+    return dresult
+
+def exponent(num1, num2):
+    presult = math.pow(num1, num2)
+    return presult
+
 ###############################################################################
-# TODO: 2. (8 pts)
+# DONE: 2. (8 pts)
 #
 #   Now we need a function that will act as the control unit. It will ask the
 #   user for inputs and call the math functions.
@@ -60,8 +80,25 @@
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
 
+import math
+def main():
+    print("Hey, I'm a calculator! Don't believe me? Give me two numbers!")
+    num1 = float(input("First number:"))
+    num2 = float(input("Second number:"))
+    aresult = add(num1, num2)
+    print(f"addition: {aresult}")
+    sresult = subtract(num1, num2)
+    print(f"subtraction: {sresult}")
+    mresult = multiply(num1, num2)
+    print(f"multiplication: {mresult}")
+    dresult = divide(num1, num2)
+    print(f"division: {dresult}")
+    presult = exponent(num1, num2)
+    print(f"exponent: {presult}")
+    print("See, I told ya so!")
+main()
 ###############################################################################
-# TODO: 3. EXTRA CREDIT (4 pts)
+# DONE: 3. EXTRA CREDIT (4 pts)
 #
 #   For this _TODO_, do NOT write your code beneath it. You will be modifying
 #   your code above. This is extra credit, so you don't need to complete this
